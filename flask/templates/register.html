@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <!-- <h2><b>Register</b></h2> -->
+         <form action="/register" method="POST">
+            <div class = "form-group">
+                <label for="Status">Role:</label>
+                <input type="text" class = "form-control" name = "status" placeholder="Dr / Nurse">
+            </div>
+             <div class = "form-group">
+                <label for="Username">Username:</label>
+                <input type="text" class = "form-control" name = "username">
+            </div>
+            <div class = "form-group">
+                <label for="Email">Email:</label>
+                <input type="email" class = "form-control" name = "email">
+            </div>
+            <div class = "form-group">
+                <label for="Password">Password:</label>
+                <input type="password" class = "form-control" name = "password">
+            </div>
+            <div class = "form-group">
+               <button type = "submit" class = "btn btn-primary">Register</button><br><br>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

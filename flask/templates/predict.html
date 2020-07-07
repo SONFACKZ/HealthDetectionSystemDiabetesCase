@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %} Prediction {% endblock %}
+
+{% block content %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h2>Field form to process and obtain your diabete prediction</h2>
+      {% if session['username'] %}
+      <form action="{{ url_for('predict')}}" method = "post">
+        <div class = "form-group">
+        <input type="text" class = "form-control" name="Glucose Level" placeholder="Glucose Level" required="required" />
+        </div>
+        <div class = "form-group">
+        <input type="text" class = "form-control" name="Insulin" placeholder="Insulin" required="required" />
+        </div>
+        <div class = "form-group">
+        <input type="text" class = "form-control" name="BMI" placeholder="BMI" required="required" />
+        </div>
+        <div class = "form-group">
+        <input type="text" class = "form-control" name="Age" placeholder="Age" required="required" />
+        </div>
+        <div class = "form-group"></div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </div>
+    </form>
+      <p class = "text-center">
+      {{ prediction_text }}
+    </p>
+        {% else %}
+        <p>Not yet logged</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

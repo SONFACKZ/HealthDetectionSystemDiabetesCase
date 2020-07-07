@@ -7,10 +7,6 @@ In this project, our objective is to predict whether the patient has diabetes or
 
 > Read more about it in my [Blogpost](https://medium.com/@adityamankar09/building-a-diabetes-predictor-4702b99bc7e4).
 
-# **Screenshot**
-
-![](screenshot.jpg)
-
 # Installation
 
 - Clone this repository and unzip it.
